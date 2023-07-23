@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-gray: radial-gradient(circle, rgba(175, 191, 191, 1) 0%, rgba(225, 236, 236, 1) 100%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--bg-gray);
+}
+header {
+    color: black;
+    font-size: 10em;
+}
+.my-app {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100%;
+}
+
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 400px;
+    
+    
+    background: radial-gradient(circle, rgba(104,102,126,1) 13%, rgba(106,103,112,1) 47%, rgba(88,109,113,1) 92%);
+}
+
+.output {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    font-size: 3em;
+    height: 40px;
+    color: orange;   
+}
+.input {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    font-size: 4em;
+    color: white;
+}
+
+button {
+    
+    background-color: rgb(130, 141, 141);
+    border-color: gray;
+    height: 5vh;
+    
+}
+button:hover {
+    background-color: antiquewhite;
+}
+#keys{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "clear clear  divide multiply "
+    "seven eight nine subtract"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+    font-size: 3em;
+}
+
+#zero{
+    grid-area: zero;
+}
+#clear {
+    grid-area: clear;
+    background-color: brown;
+    color: white;
+}
+#equals {
+    grid-area: equals;
+    background-color: #00f;
+    color: white;
+    height: 10vh;
+}
+#decimal {
+    
+    background-color: blueviolet;
+    color: white;
+}
+
